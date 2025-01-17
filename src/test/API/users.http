@@ -1,0 +1,46 @@
+## Rmember send Request: Ctrl + Alt + R
+@url = {{baseUrl}}:{{port}}{{basePath}}
+@model = users
+
+### Crear un Elemento
+POST {{url}}/{{model}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+	"Name": "Fabian",
+	"Pass": "password1",
+	"Role": "Admin",
+	"State": "Active"
+}
+
+### Recuperar un Elemento por id
+GET {{url}}/{{model}}/0a567ef0-47a1-4ac3-8f65-694122de35c0
+Authorization: Bearer {{token}}
+
+
+
+### GET todos los Elementos
+GET {{url}}/{{model}}
+Authorization: Bearer {{token}}
+
+
+### Borrar un Elemento
+DELETE {{url}}/{{model}}/--ID--
+Authorization: Bearer {{token}}
+
+
+	# "UserName": "RENOMBRADOO"
+### Actualizar un Elemento
+PATCH {{url}}/{{model}}/0a567ef0-47a1-4ac3-8f65-694122de35c0
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+	"Name": "The Administrator!"
+}
+
+### TEST Auth
+GET {{url}}/login?password=password1
+### TEST Auth
+GET {{url}}/login?password=passasdasd
