@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### Recuperar un Elemento por id
-GET {{url}}/{{model}}/0a567ef0-47a1-4ac3-8f65-694122de35c0
+GET {{url}}/{{model}}/fa241c23-083f-412a-96b0-38873397ad70
 Authorization: Bearer {{token}}
 
 

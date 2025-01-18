@@ -5,7 +5,8 @@
     "dev": "bun --hot src/index.js",
     "build": "bun build --bundle ./src/index.js  --target=bun --format=esm --outfile=dist/_worker.js --minify",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "seed": "sqlite3 ./src/db/db.sqlite < ./src/db/seeds.sql"
+    "seed": "sqlite3 ./src/db/db.sqlite < ./src/db/seeds.sql",
+    "seed-local": "sqlite3 ./src/db/db.sqlite < ./src/db/seeds-local.sql"
   },
   "dependencies": {
     "hono": "4.4.4",
