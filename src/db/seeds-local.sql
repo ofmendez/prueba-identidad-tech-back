@@ -26,10 +26,10 @@ CREATE TABLE IF NOT EXISTS Devices (
 INSERT INTO Users (UserId, Name, Pass, Salt, Role, State)
 VALUES 
 (
-	'fa241c23-083f-412a-96b0-38873397ad70',
+	'0a567ef0-47a1-4ac3-8f65-694122de35c0',
 	'The Administrator',
-	'9d727e5ae5cdd72cda92963d4b9966082f50bfee9f2d3f7352d04fe712665ab6a2c84649d761d5d946d5d6013c2f09c82f6e8cc7295fcb4a15a92c24acad23bb',
-	'6dd8b0ade1cf611c9957dac47389fb92',
+	'0e6d9c588b0a4886b5b8006b8d548c01b21ec99f2041087e1323993dc2a0cbe0ba550fabd98f75fe58cc927840133fab78930eab9d1e278214d92f24f6544bfc',
+	'7bf4050c78329873adc86ab624cfceb3',
 	'Admin',
 	'Active'
 );
