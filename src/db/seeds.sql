@@ -11,9 +11,14 @@ CREATE TABLE IF NOT EXISTS Users (
 );
 
 CREATE TABLE IF NOT EXISTS Devices ( 
-	DeviceId TEXT PRIMARY KEY, 
+	DeviceId INTEGER PRIMARY KEY AUTOINCREMENT,
 	Name TEXT,
 	State TEXT,
+  Battery TEXT,
+  Storage TEXT,
+  Price TEXT,
+  MainCamera TEXT,
+  FrontCamera TEXT,
 	createdAt TIMESTAMP,
 	updatedAt TIMESTAMP
 );
@@ -29,14 +34,3 @@ VALUES
 	'Active'
 );
 
-
--- INSERT INTO Devices (DeviceId, DeviceName, isActive, imgUrl, createdAt, updatedAt)
--- VALUES 
--- (
--- 	'001',
--- 	'Samsung Galaxy S10',
--- 	'True',
--- 	'http://cdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s8-plus-.jpg',
--- 	'2021-06-01 00:00:00',
--- 	'2021-06-01 00:00:00'
--- );

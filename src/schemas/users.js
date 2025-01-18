@@ -13,8 +13,8 @@ const userSchema = z.object({
   avatar: z.string().url({
     message: 'Avatar must be a valid URL'
   }).optional(),
-  createdAt: z.date().optional()
-
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional()
 });
 
 export function validateUser (input) {

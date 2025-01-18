@@ -23,13 +23,12 @@ export class DeviceModel {
     }
   }
 
-  // TODO: Implement the create method
   async create ({ i, c }) {
     try {
       const query = this.db.query(
-        'INSERT INTO Devices ()'
+        'INSERT INTO Devices ( Name, State, Battery, Storage, Price, MainCamera, FrontCamera, createdAt, updatedAt) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)'
       );
-      const result = query.all();
+      const result = query.run(i.Name, i.State, i.Battery, i.Storage, i.Price, i.MainCamera, i.FrontCamera, new Date().toISOString(), new Date().toISOString());
       return { done: true, results: result };
     } catch (error) {
       return { done: false, error };

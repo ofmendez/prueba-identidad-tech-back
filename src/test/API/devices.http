@@ -1,0 +1,45 @@
+## Rmember send Request: Ctrl + Alt + R
+@url = {{baseUrl}}:{{port}}{{basePath}}
+@model = devices
+
+### Crear un Elemento
+POST {{url}}/{{model}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "Name": "RESR Phone test",
+  "State": "Active",
+  "Battery": "2000 mAh",
+  "Storage": "32 GB",
+  "Price": "200 USD",
+  "MainCamera": "16 MP",
+  "FrontCamera": "10 MP"
+}
+
+### Recuperar un Elemento por id
+GET {{url}}/{{model}}/1
+Authorization: Bearer {{token}}
+
+
+
+### GET todos los Elementos
+GET {{url}}/{{model}}
+Authorization: Bearer {{token}}
+
+
+### Borrar un Elemento
+DELETE {{url}}/{{model}}/2
+Authorization: Bearer {{token}}
+
+
+	# "Name": "RENOMBRADOO"
+### Actualizar un Elemento
+PATCH {{url}}/{{model}}/3
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+	"Name": "__REST Phone test__"
+}
+
